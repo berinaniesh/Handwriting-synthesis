@@ -34,7 +34,6 @@ class HandwritingDataset(Dataset):
 
         # Convert list of str into array of list of chars
         char_seqs = [list(char_seq) for char_seq in texts]
-        char_seqs = np.asarray(char_seqs)
 
         char_lens = [len(char_seq) for char_seq in char_seqs]
         max_char_len = np.max(char_lens)
